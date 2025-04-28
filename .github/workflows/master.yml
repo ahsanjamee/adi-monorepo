@@ -1,0 +1,39 @@
+name: Master Deploy
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    name: Deploying to Master Server
+    steps:
+      - name: Start Deployment
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          port: ${{ secrets.PORT }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{secrets.PASSWORD}}
+          script: |
+            cd /home/ubuntu/adi/adi-monorepo
+            git pull origin master
+
+            # Install dependencies for all repos
+            npm install --force
+
+            # Build and restart store
+            cd apps/store
+            rm -rf .next
+            npm run build
+            pm2 restart adi-store
+
+            # Restart other services
+            cd apps/admin
+            pm2 restart adi-admin
+
+            cd apps/backend
+            pm2 restart adi-backend
+
+            exit
