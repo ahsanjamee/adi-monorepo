@@ -2,14 +2,14 @@ const setting = [
   {
     setting: {
       number_of_image_per_product: "5",
-      shop_name: "Neo",
+      shop_name: "Adi",
       address: "87, Culvert Road, Purana Paltan, Dhaka",
-      company_name: "Neo",
+      company_name: "Adi",
       vat_number: "",
       post_code: "1000",
       contact: "01701012948",
-      email: "electroBd@gmail.com",
-      website: "https://auction-pikary.com/",
+      email: "admin@adi.com",
+      website: "https://adi.com/",
       default_currency: "৳",
       default_time_zone: "Asia/Dhaka",
       default_date_format: "MMM D, YYYY",
