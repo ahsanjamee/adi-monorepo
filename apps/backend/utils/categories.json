@@ -1,0 +1,24 @@
+[
+  {
+    "_id": {
+      "$oid": "632aae414d87ff2494210945"
+    },
+    "status": "show",
+    "name": {
+      "en": "Smartphones"
+    },
+    "description": {
+      "en": "Smartphones"
+    },
+    "parentId": "62c827b5a427b63741da9175",
+    "parentName": "Home",
+    "icon": "https://res.cloudinary.com/dvml1gyhh/image/upload/v1714903982/ECOM/categories/smartphon_iy1xa7.png",
+    "__v": 0,
+    "createdAt": {
+      "$date": "2023-04-14T15:27:07.837Z"
+    },
+    "updatedAt": {
+      "$date": "2023-04-14T15:27:07.837Z"
+    }
+  }
+]
