@@ -345,7 +345,7 @@ const InvoiceForDownload = ({
               >
                 <Image
                   src={logoDark}
-                  alt="Neo"
+                  alt="Adi"
                   style={{
                     width: 90,
                     alignItems: "right",

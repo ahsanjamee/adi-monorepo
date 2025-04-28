@@ -49,7 +49,7 @@ async function sendSms(phoneNumbers, message, messageType = "OTHER") {
 
     for (const phone of phoneNumbersArray) {
       await SmsTracking.create({
-        companyName: "Neo",
+        companyName: "Adi",
         recipientNumber: phone,
         message,
         messageType,
@@ -68,7 +68,7 @@ async function sendSms(phoneNumbers, message, messageType = "OTHER") {
 
     for (const phone of phoneNumbersArray) {
       await SmsTracking.create({
-        companyName: "Neo",
+        companyName: "Adi",
         recipientNumber: phone,
         message,
         messageType,
@@ -86,7 +86,7 @@ const otpStore = new Map(); // In-memory store for OTPs
 async function sendOtp(phone) {
   const otp = crypto.randomInt(100000, 999999).toString();
   otpStore.set(phone, otp);
-  const message = `Neo এর জন্য আপনার ভেরিফিকেশন কোড ${otp}`;
+  const message = `Adi এর জন্য আপনার ভেরিফিকেশন কোড ${otp}`;
 
   sendSms(phone, message, "OTP");
 }

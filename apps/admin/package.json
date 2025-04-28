@@ -1,7 +1,7 @@
 {
   "name": "neo-admin",
   "version": "0.1.0",
-  "description": "this is Neo-admin built with react.js and tailwindcss",
+  "description": "this is Adi-admin built with react.js and tailwindcss",
   "private": true,
   "type": "module",
   "dependencies": {

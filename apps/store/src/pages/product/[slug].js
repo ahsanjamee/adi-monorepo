@@ -442,7 +442,7 @@ const ProductScreen = ({ product, attributes, relatedProducts }) => {
                             <ul className="mt-4 flex">
                               <li className="mr-2 flex items-center rounded-full border border-gray-100 text-center  transition duration-500 ease-in-out hover:bg-emerald-500">
                                 <FacebookShareButton
-                                  url={`https://auction-pikary.com/product/${router.query.slug}`}
+                                  url={`https://adi-store.ovationdental.store/product/${router.query.slug}`}
                                   quote=""
                                 >
                                   <FacebookIcon size={32} round />
@@ -450,7 +450,7 @@ const ProductScreen = ({ product, attributes, relatedProducts }) => {
                               </li>
                               {/* <li className="mr-2 flex items-center rounded-full border border-gray-100 text-center  transition duration-500 ease-in-out hover:bg-emerald-500">
                                 <TwitterShareButton
-                                  url={`https://auction-pikary.com/product/${router.query.slug}`}
+                                  url={`https://adi-store.ovationdental.store/product/${router.query.slug}`}
                                   quote=""
                                 >
                                   <TwitterIcon size={32} round />
@@ -458,7 +458,7 @@ const ProductScreen = ({ product, attributes, relatedProducts }) => {
                               </li>
                               <li className="mr-2 flex items-center rounded-full border border-gray-100 text-center  transition duration-500 ease-in-out hover:bg-emerald-500">
                                 <RedditShareButton
-                                  url={`https://auction-pikary.com/product/${router.query.slug}`}
+                                  url={`https://adi-store.ovationdental.store/product/${router.query.slug}`}
                                   quote=""
                                 >
                                   <RedditIcon size={32} round />
@@ -466,7 +466,7 @@ const ProductScreen = ({ product, attributes, relatedProducts }) => {
                               </li> */}
                               <li className="mr-2 flex items-center rounded-full border border-gray-100 text-center  transition duration-500 ease-in-out hover:bg-emerald-500">
                                 <WhatsappShareButton
-                                  url={`https://auction-pikary.com/product/${router.query.slug}`}
+                                  url={`https://adi-store.ovationdental.store/product/${router.query.slug}`}
                                   quote=""
                                 >
                                   <WhatsappIcon size={32} round />
@@ -474,7 +474,7 @@ const ProductScreen = ({ product, attributes, relatedProducts }) => {
                               </li>
                               {/* <li className="mr-2 flex items-center rounded-full border border-gray-100 text-center  transition duration-500 ease-in-out hover:bg-emerald-500">
                                 <LinkedinShareButton
-                                  url={`https://auction-pikary.com/product/${router.query.slug}`}
+                                  url={`https://adi-store.ovationdental.store/product/${router.query.slug}`}
                                   quote=""
                                 >
                                   <LinkedinIcon size={32} round />

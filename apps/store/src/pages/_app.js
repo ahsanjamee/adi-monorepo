@@ -44,7 +44,7 @@ function MyApp({ Component, pageProps }) {
 
       // Track page view on route change
       const handleRouteChange = () => {
-        handlePageView(`/${router.pathname}`, "Neo");
+        handlePageView(`/${router.pathname}`, "Adi");
       };
 
       // Set up event listeners

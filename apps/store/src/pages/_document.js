@@ -19,7 +19,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <link rel="icon" href={setting?.favicon || "/favicon.png"} />
-          <meta property="og:title" content={setting?.meta_title || "Neo"} />
+          <meta property="og:title" content={setting?.meta_title || "Adi"} />
           <meta property="og:type" content="eCommerce Website" />
           <meta
             property="og:description"
@@ -31,7 +31,9 @@ class MyDocument extends Document {
           />
           <meta
             property="og:url"
-            content={setting?.seo?.meta_url || "https://auction-pikary.com/"}
+            content={
+              setting?.seo?.meta_url || "https://adi-store.ovationdental.store"
+            }
           />
           <meta
             property="og:image"

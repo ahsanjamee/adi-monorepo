@@ -456,7 +456,7 @@ const Footer = () => {
           Made with <span className="text-red-500">❤</span> by NetSoft
         </p>
         <p className="text-sm text-gray-100 leading-6">
-          Copyright 2024 @ Neo, All rights reserved.
+          Copyright 2024 @ Adi, All rights reserved.
         </p>
       </div>
     </div>

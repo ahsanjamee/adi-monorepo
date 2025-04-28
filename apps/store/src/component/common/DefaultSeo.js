@@ -14,12 +14,12 @@ const DefaultSeo = () => {
   } = useAsync(SettingServices.getStoreCustomizationSetting);
   return (
     <NextSeo
-      title={globalSetting?.meta_title || "Neo"}
+      title={globalSetting?.meta_title || "Adi"}
       openGraph={{
         type: "website",
         locale: "en_IE",
-        url: globalSetting?.meta_url || "https://auction-pikary.com/",
-        site_name: globalSetting?.meta_title || "Neo",
+        url: globalSetting?.meta_url || "https://adi-store.ovationdental.store",
+        site_name: globalSetting?.meta_title || "Adi",
         images: [
           {
             url:
@@ -27,7 +27,7 @@ const DefaultSeo = () => {
               "https://res.cloudinary.com/dvml1gyhh/image/upload/v1725570508/ecom/auction.jpg",
             width: 800,
             height: 600,
-            alt: globalSetting?.meta_title || "Neo",
+            alt: globalSetting?.meta_title || "Adi",
           },
         ],
       }}

@@ -2,7 +2,7 @@
   "name": "neo-store",
   "version": "0.1.0",
   "description": "this is neo-store built with next.js and tailwindcss",
-  "homepage": "https://auction-pikary.com/",
+  "homepage": "https://adi-store.ovationdental.store/",
   "private": true,
   "scripts": {
     "dev": "next dev",
