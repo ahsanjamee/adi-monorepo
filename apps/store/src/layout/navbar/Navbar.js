@@ -50,23 +50,31 @@ const Navbar = () => {
       <div className="bg-[#E9F7E9] sticky top-0 z-20">
         <div className="max-w-screen-2xl mx-auto px-3 sm:px-10">
           <div className="top-bar h-16 lg:h-auto flex items-center justify-between py-4 mx-auto">
-            <Link
-              href="/"
-              className="mr-3 lg:mr-12 xl:mr-12 hidden md:hidden lg:block"
-            >
-              <Image
-                width={120}
-                height={40}
-                src={
-                  storeCustomizationSetting?.navbar?.logo || "/logo/logo.png"
-                }
-                alt="logo"
-                className="object-contain"
-              />
-            </Link>
+            <div className="flex items-center">
+              <Link
+                href="/"
+                className="mr-3 lg:mr-4 xl:mr-4 hidden md:hidden lg:flex items-center gap-4"
+              >
+                <Image
+                  width={80}
+                  height={28}
+                  minWidth={80}
+                  minHeight={28}
+                  src={
+                    storeCustomizationSetting?.navbar?.logo || "/logo/logo.png"
+                  }
+                  alt="logo"
+                  className="object-contain"
+                />
+                <div className=" text-lg text-emerald-500 font-bold">
+                  <span>ADI BAZAR</span>
+                  <br />
+                  Agriculture and Dairy Improvement, since 2014
+                </div>
+              </Link>
+            </div>
 
             <SearchBar />
-
             <div className="hidden md:hidden md:items-center lg:flex xl:block absolute inset-y-0 right-0 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               <button
                 className="p-2 rounded-full bg-emerald-500 text-white text-2xl font-bold"

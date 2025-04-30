@@ -295,10 +295,10 @@ const Footer = () => {
                 rel="noreferrer"
               >
                 <Image
-                  width={140}
-                  height={60}
+                  width={80}
+                  height={20}
                   src={
-                    // storeCustomizationSetting?.footer?.block4_logo ||
+                    storeCustomizationSetting?.footer?.block4_logo ||
                     "/logo/logo-footer.png"
                   }
                   alt="logo"

@@ -46,7 +46,7 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="w-full transition-all duration-200 ease-in-out md:mx-12 lg:mx-4 lg:flex lg:max-w-[520px] xl:mx-0 xl:max-w-[750px] 2xl:max-w-[900px]">
+    <div className="w-full transition-all duration-200 ease-in-out md:mx-12 lg:mx-4 lg:flex lg:max-w-[420px] xl:mx-0 xl:max-w-[550px] 2xl:max-w-[650px]">
       <div className="relative z-30 flex w-full flex-shrink-0 flex-col justify-center">
         <div className="mx-auto flex w-full flex-col">
           <form

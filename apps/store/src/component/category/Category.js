@@ -11,6 +11,7 @@ import { SidebarContext } from "@context/SidebarContext";
 import CategoryServices from "@services/CategoryServices";
 import CategoryCard from "@component/category/CategoryCard";
 import useUtilsFunction from "@hooks/useUtilsFunction";
+import useGetSetting from "@hooks/useGetSetting";
 
 const Category = () => {
   const { categoryDrawerOpen, closeCategoryDrawer } =
@@ -20,18 +21,32 @@ const Category = () => {
     CategoryServices.getShowingCategory()
   );
 
+  const { storeCustomizationSetting } = useGetSetting();
+
   return (
     <div className="flex flex-col w-full h-full bg-white cursor-pointer scrollbar-hide">
       {categoryDrawerOpen && (
-        <div className="w-full flex justify-between items-center h-16 px-6 py-4 bg-emerald-500 text-white border-b border-gray-100">
+        <div className="w-full flex justify-between items-center h-16 px-6 py-4 bg-[#E9F7E9] text-white border-b border-gray-100">
           <h2 className="font-semibold font-serif text-lg m-0 text-heading flex align-center">
-            <Link href="/" className="mr-10">
-              <Image width={100} height={38} src="/logo/logo.png" alt="logo" />
+            <Link href="/" className="mr-10 flex items-center gap-4">
+              <Image
+                width={40}
+                height={10}
+                src={
+                  storeCustomizationSetting?.navbar?.logo || "/logo/logo.png"
+                }
+                alt="logo"
+              />
+              <div className="block lg:hidden text-xs text-emerald-500 font-bold">
+                <span>ADI BAZAR</span>
+                <br />
+                Agriculture and Dairy Improvement, since 2014
+              </div>
             </Link>
           </h2>
           <button
             onClick={closeCategoryDrawer}
-            className="flex text-xl items-center justify-center w-8 h-8 rounded-full bg-gray-50 text-red-500 p-2 focus:outline-none transition-opacity hover:text-red-600"
+            className="flex text-xl items-center justify-center w-8 h-8 rounded-full shadow-lg bg-gray-50 text-red-500 p-2 focus:outline-none transition-opacity hover:text-red-600"
             aria-label="close"
           >
             <IoClose />
