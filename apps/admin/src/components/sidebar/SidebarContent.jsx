@@ -25,7 +25,7 @@ const SidebarContent = () => {
   return (
     <div className="py-4 text-gray-500 dark:text-gray-400">
       <a className=" text-gray-900 dark:text-gray-200" href="/dashboard">
-        <img src={logo} alt="Adi" width="135" className="pl-6" />
+        <img src={'https://res.cloudinary.com/drbno0dsh/image/upload/v1745906057/undefined/adi-logo.png'} alt="Adi" width="100" className="pl-6" />
       </a>
       <ul className="mt-8">
         {sidebar.map((route) =>
