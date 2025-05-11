@@ -27,13 +27,13 @@ jobs:
             cd apps/store
             rm -rf .next
             npm run build
-            pm2 restart adi-store
 
             # Restart other services
             cd apps/admin
-            pm2 restart adi-admin
+            npm run build
 
-            cd apps/backend
             pm2 restart adi-backend
+            pm2 restart adi-admin
+            pm2 restart adi-store
 
             exit
