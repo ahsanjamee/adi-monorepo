@@ -27,7 +27,7 @@ const Footer = () => {
   const { loading, storeCustomizationSetting } = useGetSetting();
 
   return (
-    <div className="pb-16 lg:pb-0 xl:pb-0 bg-emerald-500">
+    <div className="pb-16 lg:pb-0 xl:pb-0 bg-emerald-200">
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-10">
         <div className="grid grid-cols-2 md:grid-cols-7 xl:grid-cols-12 gap-5 sm:gap-9 lg:gap-11 xl:gap-7 py-10 lg:py-16 justify-between">
           {storeCustomizationSetting?.footer?.block1_status && (
@@ -332,7 +332,7 @@ const Footer = () => {
 
         {/* <hr className="hr-line"></hr> */}
 
-        <div className="mx-auto max-w-screen-2xl px-4 sm:px-10 bg-emerald-500 shadow-sm border border-gray-50 rounded-lg">
+        <div className="mx-auto max-w-screen-2xl px-4 sm:px-10 bg-emerald-200 shadow-sm border border-gray-50 rounded-lg">
           <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-5 sm:gap-9 lg:gap-11 xl:gap-7 py-8 items-center justify-between">
             <div className="col-span-1">
               {storeCustomizationSetting?.footer?.social_links_status && (
