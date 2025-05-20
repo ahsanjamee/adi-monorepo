@@ -29,7 +29,7 @@ jobs:
             npm run build
 
             # Restart other services
-            cd apps/admin
+            cd ../admin
             npm run build
 
             pm2 restart adi-backend
