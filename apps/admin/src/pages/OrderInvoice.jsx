@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import ReactToPrint from "react-to-print";
 import React, { useContext, useRef } from "react";
 import { FiPrinter } from "react-icons/fi";
@@ -20,8 +20,6 @@ import Status from "@/components/table/Status";
 import OrderServices from "@/services/OrderServices";
 import Invoice from "@/components/invoice/Invoice";
 import Loading from "@/components/preloader/Loading";
-import logoDark from "@/assets/img/logo/logo-2.jpg";
-import logoLight from "@/assets/img/logo/logo-2.jpg";
 import PageTitle from "@/components/Typography/PageTitle";
 import useUtilsFunction from "@/hooks/useUtilsFunction";
 import InvoiceForDownload from "@/components/invoice/InvoiceForDownload";
@@ -31,6 +29,8 @@ const OrderInvoice = () => {
   const { mode } = useContext(WindmillContext);
   const { id } = useParams();
   const printRef = useRef();
+
+  console.log(id)
 
   const { data, loading, error } = useAsync(() =>
     OrderServices.getOrderById(id)
@@ -67,11 +67,7 @@ const OrderInvoice = () => {
               </h1>
               <div className="lg:text-right text-left">
                 <h2 className="lg:flex lg:justify-end text-lg font-serif font-semibold mt-4 lg:mt-0 lg:ml-0 md:mt-0">
-                  {mode === "dark" ? (
-                    <img src={logoDark} alt="Adi" width="110" />
-                  ) : (
-                    <img src={logoLight} alt="Adi" width="110" />
-                  )}
+                  <img src={'https://res.cloudinary.com/drbno0dsh/image/upload/v1745906057/undefined/adi-logo.png'} alt="Adi" width="110" />
                 </h2>
                 <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
                   {globalSetting?.address} <br />

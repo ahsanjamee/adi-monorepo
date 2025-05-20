@@ -29,14 +29,18 @@ const ContactUs = () => {
   const { storeCustomizationSetting, loading, error } = useGetSetting();
 
   const submitHandler = async (data) => {
-    const res = await ContactServices.addContact(data);
-    if (res.status === 201) {
-      reset();
-      notifySuccess(
-        "Your message sent successfully. We will contact you shortly."
-      );
-    } else {
-      notifyError("Error sending message");
+    try {
+      const res = await ContactServices.addContact(data);
+      if (res.status === 201) {
+        reset();
+        notifySuccess(
+          "Your message sent successfully. We will contact you shortly."
+        );
+      } else {
+        notifyError("Error sending message");
+      }
+    } catch (error) {
+      notifyError(error.response?.data?.message);
     }
   };
 
@@ -53,7 +57,7 @@ const ContactUs = () => {
         <div className="max-w-screen-2xl mx-auto lg:py-20 py-10 px-4 sm:px-10">
           {/* contact promo */}
           <div className="grid md:grid-cols-2 gap-6 lg:grid-cols-3 xl:gap-8 font-serif">
-          {loading ? (
+            {loading ? (
               <CMSkeleton
                 count={10}
                 height={20}
@@ -81,7 +85,7 @@ const ContactUs = () => {
                 </p>
               </div>
             )}
-            
+
             {loading ? (
               <CMSkeleton
                 count={10}
@@ -218,9 +222,7 @@ const ContactUs = () => {
                             message: "Phone number is invalid",
                           },
                         }}
-                        placeholder={t(
-                          "common:contact-page-form-plaholder-email"
-                        )}
+                        placeholder={"Enter your phone number"}
                       />
                       <Error errorName={errors.phone} />
                     </div>

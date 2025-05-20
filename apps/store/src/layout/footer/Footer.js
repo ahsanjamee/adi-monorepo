@@ -325,6 +325,11 @@ const Footer = () => {
                   {" "}
                   Email : {storeCustomizationSetting?.footer?.block4_email}
                 </span>
+                <br />
+                <span>
+                  {" "}
+                  Website : {storeCustomizationSetting?.seo?.meta_url}
+                </span>
               </p>
             </div>
           )}
@@ -456,7 +461,7 @@ const Footer = () => {
           Made with <span className="text-red-500">❤</span> by NetSoft
         </p>
         <p className="text-sm text-emerald-500 leading-6">
-          Copyright 2024 @ Adi, All rights reserved.
+          Copyright 2024 @ ADI, All rights reserved.
         </p>
       </div>
     </div>

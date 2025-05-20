@@ -13,6 +13,8 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
 
   const { getNumberTwo } = useUtilsFunction();
 
+  console.log("data", storeCustomizationSetting?.seo?.meta_img);
+
   return (
     <div ref={printRef}>
       <div className="bg-indigo-50 p-8 rounded-t-xl">

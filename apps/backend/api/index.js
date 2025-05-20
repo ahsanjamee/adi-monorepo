@@ -60,7 +60,7 @@ app.use("/api/currency/", isAuth, currencyRoutes);
 app.use("/api/language/", languageRoutes);
 app.use("/api/notification/", isAuth, notificationRoutes);
 app.use("/api/shipping-rate/", isAuth, shippingRateRoutes);
-app.use("/api/contact-form/", isAuth, contactRoutes);
+app.use("/api/contact-form/", contactRoutes);
 app.use("/api/sms/", isAuth, smsTrackingRoutes);
 
 //if you not use admin dashboard then these two route will not needed.

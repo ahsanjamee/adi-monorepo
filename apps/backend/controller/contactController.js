@@ -3,15 +3,15 @@ const Contact = require("../models/Contact");
 // Add a new contact entry
 const addContact = async (req, res) => {
   try {
-    const { name, email, subject, message, phone } = req.body;
+    const { name, subject, message, phone, email } = req.body;
 
     // Create a new Contact object
     const newContact = new Contact({
       name,
-      email,
-      phone,
       subject,
       message,
+      phone,
+      ...(email && { email }), // Only include email if it's provided
     });
 
     // Save the new contact to the database
@@ -33,13 +33,7 @@ const addContact = async (req, res) => {
 // Get all contact entries
 const getAllContacts = async (req, res) => {
   try {
-    // Extract query parameters for sorting
-    const sortBy = req.query.sortBy || "createdAt"; // Default to 'createdAt'
-    const sort = req.query.sort === "desc" ? 1 : -1;
-
-    // Fetch contacts from the database with sorting
-    const contacts = await Contact.find().sort({ [sortBy]: sort });
-
+    const contacts = await Contact.find();
     res.status(200).json(contacts);
   } catch (err) {
     res.status(500).json({
@@ -68,12 +62,18 @@ const getContactById = async (req, res) => {
 // Update a contact entry by ID
 const updateContact = async (req, res) => {
   try {
-    const { name, email, subject, message, phone } = req.body;
+    const { name, subject, message, phone, email } = req.body;
 
     // Update the contact entry
     const updatedContact = await Contact.findByIdAndUpdate(
       req.params.id,
-      { name, email, subject, message, phone },
+      {
+        name,
+        subject,
+        message,
+        phone,
+        ...(email && { email }), // Only include email if it's provided
+      },
       { new: true, runValidators: true }
     );
 

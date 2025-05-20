@@ -9,11 +9,14 @@ import NavBarTop from "./navbar/NavBarTop";
 import FooterTop from "@layout/footer/FooterTop";
 import MobileFooter from "@layout/footer/MobileFooter";
 import FeatureCard from "@component/feature-card/FeatureCard";
+import CustomWhatsAppChat from "@component/common/CustomWhatsappWidget";
 
 const Layout = ({ title, description, children }) => {
   return (
     <>
       <ToastContainer />
+      {/* Whatsapp */}
+      <CustomWhatsAppChat />
 
       <div className="font-sans">
         <Head>

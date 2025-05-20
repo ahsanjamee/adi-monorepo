@@ -9,7 +9,7 @@ import {
   View,
 } from "@react-pdf/renderer";
 import { useTranslation } from "react-i18next";
-import logoDark from "@/assets/img/logo/logo-2.jpg";
+import logoDark from "@/assets/img/logo/adi-logo-transparent.png";
 
 Font.register({
   family: "Open Sans",
@@ -335,25 +335,18 @@ const InvoiceForDownload = ({
             </View>
 
             <View style={{ alignItems: "flex-end" }}>
-              <Text
+
+              <Image
+                src={logoDark}
+                alt="Adi"
                 style={{
-                  flexDirection: "row",
-                  marginLeft: 80,
-                  marginTop: 35,
+                  width: '80px',
+                  alignItems: "right",
                   textAlign: "right",
+                  float: "right",
+                  marginBottom: '10px',
                 }}
-              >
-                <Image
-                  src={logoDark}
-                  alt="Adi"
-                  style={{
-                    width: 90,
-                    alignItems: "right",
-                    textAlign: "right",
-                    float: "right",
-                  }}
-                />
-              </Text>
+              />
               <Text
                 style={{
                   fontSize: 9,
