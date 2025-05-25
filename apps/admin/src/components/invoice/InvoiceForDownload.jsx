@@ -355,6 +355,8 @@ const InvoiceForDownload = ({
                   textAlign: "right",
                 }}
               >
+                ADI BAZAR
+                {"\n"}
                 {globalSetting?.address}
                 {"\n"}
                 {globalSetting?.contact}
@@ -386,7 +388,7 @@ const InvoiceForDownload = ({
                 <Text
                   style={{ width: "25%", alignItems: "baseline", fontSize: 10 }}
                 >
-                  {t("InvoiceNo")}
+                  {t("InvoiceNo")}.
                 </Text>
               </Text>
               <Text style={styles.title}>
@@ -653,6 +655,58 @@ const InvoiceForDownload = ({
               </Text>
             </View>
           </View>
+
+          {/* QR Code Section for PDF */}
+          <View style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
+            marginTop: 20,
+            paddingTop: 15,
+            borderTop: 1,
+            borderColor: '#e5e7eb',
+            marginLeft: 13,
+            marginRight: 13,
+          }}>
+            <View style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+              <Image
+                src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https://adibd.net"
+                style={{
+                  width: 60,
+                  height: 60,
+                  marginRight: 15,
+                }}
+              />
+              <View style={{
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+                <Text style={{
+                  fontSize: 9,
+                  color: '#6b7280',
+                  fontFamily: 'Open Sans',
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  marginBottom: 3,
+                }}>
+                  This is authorized computer generated invoice. No signature is required.
+                </Text>
+                <Text style={{
+                  fontSize: 8,
+                  color: '#9ca3af',
+                  fontFamily: 'Open Sans',
+                  textAlign: 'center',
+                }}>
+                  ADI All Right Reserved
+                </Text>
+              </View>
+            </View>
+          </View>
+
         </Page>
       </Document>
     </>

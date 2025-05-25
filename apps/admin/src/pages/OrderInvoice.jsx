@@ -13,6 +13,7 @@ import {
 } from "@windmill/react-ui";
 import { useTranslation } from "react-i18next";
 import { PDFDownloadLink } from "@react-pdf/renderer";
+import QRCode from "react-qr-code";
 
 //internal import
 import useAsync from "@/hooks/useAsync";
@@ -70,6 +71,7 @@ const OrderInvoice = () => {
                   <img src={'https://res.cloudinary.com/drbno0dsh/image/upload/v1745906057/undefined/adi-logo.png'} alt="Adi" width="110" />
                 </h2>
                 <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
+                  <p>ADI BAZAR</p>
                   {globalSetting?.address} <br />
                   {globalSetting?.contact} <br />{" "}
                   <span> {globalSetting?.email} </span> <br />
@@ -88,7 +90,7 @@ const OrderInvoice = () => {
               </div>
               <div className="mb-3 md:mb-0 lg:mb-0 flex flex-col">
                 <span className="font-bold font-serif text-sm uppercase text-gray-600 dark:text-gray-500 block">
-                  {t("InvoiceNo")}
+                  {t("InvoiceNo")}.
                 </span>
                 <span className="text-sm text-gray-500 dark:text-gray-400 block">
                   #{data?.invoice}
@@ -184,6 +186,30 @@ const OrderInvoice = () => {
             </div>
           </div>
         )}
+
+        {/* QR Code Section */}
+        {!loading && (
+          <div className="flex items-center justify-center mt-6 p-4 border-t border-gray-200 dark:border-gray-700">
+            <div className="flex items-center space-x-4">
+              <div className="bg-white p-2 rounded-lg shadow-sm">
+                <QRCode
+                  value="https://adibd.net"
+                  size={80}
+                  level="M"
+                />
+              </div>
+              <div className="text-center">
+                <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
+                  This is authorized computer generated invoice. No signature is required.
+                </p>
+                <p className="text-xs text-gray-500 dark:text-gray-500">
+                  ADI All Right Reserved
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
       </div>
       {!loading && (
         <div className="mb-4 mt-3 flex justify-between">
