@@ -2,6 +2,7 @@ import dayjs from "dayjs";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import QRCode from "react-qr-code";
 //internal import
 import OrderTable from "@component/order/OrderTable";
 import useUtilsFunction from "@hooks/useUtilsFunction";
@@ -44,7 +45,7 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
             </h6>
           </div>
           <div className="lg:text-right text-left">
-            <h2 className="text-lg font-serif font-semibold mt-4 lg:mt-0 md:mt-0">
+            <h2 className="text-lg font-serif flex justify-end font-semibold mt-4 lg:mt-0 md:mt-0">
               <Link href="/">
                 <Image
                   width={110}
@@ -180,6 +181,22 @@ const Invoice = ({ data, printRef, globalSetting, currency }) => {
               {currency}
               {getNumberTwo(data.total)}
             </span>
+          </div>
+        </div>
+      </div>
+
+      {/* QR Code Section */}
+      <div className="flex items-center justify-center mt-6 p-4 border-t border-gray-200">
+        <div className="flex items-center space-x-4">
+          <div className="bg-white p-2 rounded-lg shadow-sm">
+            <QRCode value="https://adibd.net" size={80} level="M" />
+          </div>
+          <div className="text-center">
+            <p className="text-sm font-medium text-gray-600">
+              This is authorized computer generated invoice. No signature is
+              required.
+            </p>
+            <p className="text-xs text-gray-500">ADI All Right Reserved</p>
           </div>
         </div>
       </div>

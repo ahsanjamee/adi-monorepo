@@ -196,7 +196,7 @@ const styles = StyleSheet.create({
   topAddress: {
     fontSize: 10,
     color: "#6b7280",
-    width: "100%",
+    textAlign: "right",
 
     // textAlign: "right",
     whiteSapce: "nowrap",
@@ -257,6 +257,9 @@ const styles = StyleSheet.create({
   },
   topBg: {
     // backgroundColor:'#EEF2FF',
+    display: "flex",
+    justifyContent: "flex-end",
+    flexDirection: "column",
   },
   invoiceDiv: {
     alignItems: "baseline",
@@ -281,18 +284,15 @@ const InvoiceForDownload = ({
               <Text style={styles.info}>Status : {data?.status}</Text>
             </View>
             <View style={styles.topBg}>
-              <Text
+              <Image
+                src="/logo/logo.png"
+                alt="Invoice"
                 style={{
-                  width: "100%",
-                  marginRight: "40%",
+                  width: 80,
+                  marginBottom: "20px",
+                  marginLeft: "100px",
                 }}
-              >
-                <Image
-                  src="/logo/logo.png"
-                  alt="Invoice"
-                  style={{ width: 80, textAlign: "right" }}
-                />
-              </Text>
+              />
               <Text style={styles.topAddress}>
                 {globalSetting?.address || ""}
                 {"\n"}
@@ -314,11 +314,11 @@ const InvoiceForDownload = ({
               </Text>
             </View>
             <View>
-              <Text style={styles.title}>INVOICE NO</Text>
+              <Text style={styles.title}>INVOICE NO.</Text>
               <Text style={styles.info}>#{data?.invoice}</Text>
             </View>
             <View>
-              <Text style={styles.title}>INVOICE TO</Text>
+              <Text style={styles.title}>INVOICE TO.</Text>
               <Text style={styles.info}>
                 {data?.user_info?.name?.split(" ")[0]}
               </Text>
@@ -432,7 +432,7 @@ const InvoiceForDownload = ({
             style={{
               textAlign: "center",
               fontSize: 12,
-              paddingBottom: 50,
+              paddingBottom: 20,
               paddingTop: 50,
             }}
           >
@@ -440,6 +440,69 @@ const InvoiceForDownload = ({
               Thank you <Text style={styles.thanks}>{data.name},</Text> Your
               order have been received !
             </Text>
+          </View>
+
+          {/* QR Code Section for PDF */}
+          <View
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "center",
+              marginTop: 20,
+              paddingTop: 15,
+              borderTop: 1,
+              borderColor: "#e5e7eb",
+              marginLeft: 13,
+              marginRight: 13,
+              paddingBottom: 30,
+            }}
+          >
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Image
+                src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https://adibd.net"
+                style={{
+                  width: 60,
+                  height: 60,
+                  marginRight: 15,
+                }}
+              />
+              <View
+                style={{
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Text
+                  style={{
+                    fontSize: 9,
+                    color: "#6b7280",
+                    fontFamily: "Open Sans",
+                    fontWeight: "bold",
+                    textAlign: "center",
+                    marginBottom: 3,
+                  }}
+                >
+                  This is authorized computer generated invoice. No signature is
+                  required.
+                </Text>
+                <Text
+                  style={{
+                    fontSize: 8,
+                    color: "#9ca3af",
+                    fontFamily: "Open Sans",
+                    textAlign: "center",
+                  }}
+                >
+                  ADI All Right Reserved
+                </Text>
+              </View>
+            </View>
           </View>
         </Page>
       </Document>
