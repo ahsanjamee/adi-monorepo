@@ -18,6 +18,7 @@ import FeatureCategory from "@component/category/FeatureCategory";
 import AttributeServices from "@services/AttributeServices";
 import CMSkeleton from "@component/preloader/CMSkeleton";
 import CategoryCarousel from "@component/carousel/CategoryCarousel";
+import Sidebanner from "@component/banner/Sidebanner";
 
 const Home = ({ popularProducts, discountProducts, attributes }) => {
   console.log(discountProducts);
@@ -57,7 +58,7 @@ const Home = ({ popularProducts, discountProducts, attributes }) => {
                   </div>
                   <div className="w-full hidden lg:flex">
                     {storeCustomizationSetting?.home?.coupon_status && (
-                      <OfferCard />
+                      <Sidebanner />
                     )}
                   </div>
                 </div>
