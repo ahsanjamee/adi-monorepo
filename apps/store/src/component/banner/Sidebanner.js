@@ -12,7 +12,7 @@ const Sidebanner = () => {
         backgroundPosition: 'center', // Centers the image
         backgroundRepeat: 'no-repeat', // Prevents image from repeating
         height: '313px', // Give the div a defined height to see the background
-        width: '515px',
+        width: '100%',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
