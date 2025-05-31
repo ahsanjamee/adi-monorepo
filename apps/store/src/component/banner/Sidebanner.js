@@ -45,6 +45,8 @@ const Sidebanner = () => {
         cursor-pointer                            /* Indicate it's clickable */
         text-lg                                   /* Larger text size */
         w-full md:w-auto                          /* Full width on small screens, auto on medium+ */
+        ml-20 mr-20 md:block       
+        
       "
     >
      <a href="/search?category=treatment-consultancy&_id=632ab14a4d87ff2494210a29">Livestock & Agriculture Care</a>
