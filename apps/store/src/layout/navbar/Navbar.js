@@ -74,7 +74,7 @@ const Navbar = () => {
               </Link>
             </div>
             <SearchBar />
-            <div className="md:hidden bg-green-700 font-serif ml-4 py-3 px-4 rounded text-sm font-bold text-white hover:bg-blue-600">
+            <div className="md:hidden bg-green-700 font-serif ml-4 py-3 px-4 rounded text-sm font-bold text-white hover:bg-green-600">
               <Link
                 href="#"
                 >

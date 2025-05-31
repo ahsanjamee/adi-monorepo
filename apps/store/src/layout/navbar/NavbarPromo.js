@@ -371,7 +371,7 @@ const NavbarPromo = () => {
             )}
               <Link
                 href="#"
-                className="relative inline-flex items-center  bg-green-700 font-serif ml-4 py-2 px-4 rounded text-sm font-semibold text-white hover:text-red-300"
+                className="relative inline-flex items-center  bg-green-700 font-serif ml-4 py-2 px-4 rounded text-sm font-semibold text-white hover:bg-green-600"
                 >
                 {'Registration'}
               </Link>
