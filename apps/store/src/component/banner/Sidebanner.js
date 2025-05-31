@@ -45,7 +45,7 @@ const Sidebanner = () => {
         cursor-pointer                            /* Indicate it's clickable */
         text-lg                                   /* Larger text size */
         w-full md:w-auto                          /* Full width on small screens, auto on medium+ */
-        ml-20 mr-20 md:block       
+        ml-10 mr-10 md:block       
         
       "
     >
