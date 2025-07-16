@@ -382,7 +382,7 @@ const NavbarPromo = () => {
                 href="https://portal.adibd.net/auth/login"
                 className="relative inline-flex items-center  bg-green-700 font-serif ml-4 py-2 px-4 rounded text-sm font-semibold text-white hover:bg-green-600"
                 >
-                {'Prescription1'}
+                {'Prescription'}
               </Link>
             
           </div>
