@@ -76,11 +76,12 @@ const Navbar = () => {
             <SearchBar />
             <div className="md:hidden bg-green-700 font-serif ml-4 py-3 px-4 rounded text-sm font-bold text-white hover:bg-green-600">
               <Link
-                href="#"
-                >
-                {'Registration'}
-              </Link>        
-            </div>      
+                target="_blank"
+                href="https://portal.adibd.net/auth/register"
+              >
+                {"Registration"}
+              </Link>
+            </div>
             <div className="hidden md:hidden md:items-center lg:flex xl:block absolute inset-y-0 right-0 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               <button
                 className="p-2 rounded-full bg-emerald-500 text-white text-2xl font-bold"

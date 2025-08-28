@@ -6,9 +6,9 @@
   "scope": "/",
   "start_url": "/",
   "id": "/",
-  "short_name": "Adi - Store",
-  "name": "Adi",
-  "description": "Electronics mart",
+  "short_name": "ADI BD",
+  "name": "ADI BD",
+  "description": "Veterenian shop",
   "icons": [
     {
       "src": "/icon-192x192.png",
